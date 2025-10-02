@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematical Puzzle: Tower of Hanoi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background Animation -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- Intro Screen -->
+    <div id="intro-screen" class="screen">
+        <h1 class="main-title">🧠 Welcome to the Mathematical Puzzle</h1>
+        <h2 class="subtitle">Tower of Hanoi</h2>
+        <button id="play-now" class="btn">Play Now</button>
+    </div>
+
+    <!-- Rules Screen -->
+    <div id="rules-screen" class="screen hidden">
+        <h2>Rules & Objective</h2>
+        <ul>
+            <li>Move all disks from Tower A to Tower C.</li>
+            <li>Only one disk may be moved at a time.</li>
+            <li>No larger disk may sit on a smaller disk.</li>
+        </ul>
+        <p>Minimum moves = 2<sup>n</sup> - 1</p>
+        <button id="start-game" class="btn">Start Game ▶️</button>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen hidden">
+        <div id="ui-bar">
+            <label>Number of Disks: <input type="range" id="disk-slider" min="3" max="8" value="3"></label>
+            <span id="move-counter">Moves: 0</span>
+            <button id="hint-btn"> Hint 💡 </button>
+            <button id="optimal-btn"> Show Optimal Moves 🔍 </button>
+        </div>
+        <div id="game-area">
+            <div class="tower" id="tower-A"></div>
+            <div class="tower" id="tower-B"></div>
+            <div class="tower" id="tower-C"></div>
+        </div>
+    </div>
+
+    <!-- Win Screen -->
+    <div id="win-screen" class="screen hidden">
+        <h1>🎉Hurray You Won! 🎉</h1>
+
+        <h2>Want to increse your IQ ?</h2>
+        <button id="math-btn" class="btn">📐 Math & Logic</button>
+        <button id="history-btn" class="btn">📜 History</button>
+    </div>
+    <div id="info-screen" class="screen hidden">
+        <div id="info-content"></div>
+        <p style="position: absolute; bottom: 20px; right: 20px; font-size: 0.9em; color: #00f2ff;">
+            Made and programmed by: Trimbakesh,
+            Om Verma,
+            Kushagra Tiwari,
+            Pratik,
+        </p>
+        <button id="back-to-game" class="btn">Back</button>
+    </div>
+    <!-- Info Screen -->
+    <div id="info-screen" class="screen hidden">
+        <div id="info-content"></div>
+        <button id="back-to-game" class="btn">Back</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
